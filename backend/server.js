@@ -17,5 +17,5 @@ mongoose.connection.once("open", () => {
 });
 
 app.listen(port, () =>{
-    console.log("Server is starting on port" + port);
+    console.log("Server is starting on port " + port);
 });
