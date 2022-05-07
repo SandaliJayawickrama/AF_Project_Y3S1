@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+
+const DoctorRoutes = require("./routes/doctors");
 
 require('dotenv').config();
 
@@ -8,9 +11,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3100;
 const uri = process.env.MONGO_URI;
 
+app.use("/api/doctors" , DoctorRoutes);
+
+//DB Connection
 mongoose.connect(uri, {useNewUrlParser:true, useUnifiedTopology:true});
 mongoose.connection.once("open", () => {
     console.log("MongoDB Connected");
