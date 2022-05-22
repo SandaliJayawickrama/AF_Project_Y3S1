@@ -8,7 +8,7 @@ const FileUpload = () => {
     return (
         <div>
             <section id="contact">
-                <div className='container my-3 '>
+                <div className='container my-4 '>
                     <div className='row mb-5'>
                         <div className='col-12'>
                             <h3 className='fs-5 text-center mb-0'>File Upload</h3>
@@ -33,7 +33,7 @@ const FileUpload = () => {
                                     <input name="file" class="form-control" id="file" rows="5" type='file' />
                                 </div>
                                 <button type="button" class="btn btn-primary">
-                                    Sample Button
+                                    Upload Documents
                                 </button>
                             </form>
                         </div>
