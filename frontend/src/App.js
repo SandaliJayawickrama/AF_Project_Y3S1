@@ -13,6 +13,7 @@ import Services from './Components/Home/Service';
 import About from './Components/Home/About';
 import Contact from './Components/Home/Contact';
 import Error from './Components/Home/Error';
+import FileUpload from './Components/FileUpload/FileUpload';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="*" element={<Error />} />
+        <Route exact path="/fileupload" element={<FileUpload />} />
       </Routes>
     </>
 
