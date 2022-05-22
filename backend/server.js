@@ -30,6 +30,11 @@ mongoose.connect(URI, {
 
 //Connect to the server
 const PORT = process.env.PORT || 3100
+
+const markingRouter = require("./routes/markings.js");
+
+app.use("/marking",markingRouter); 
+
 app.listen(PORT, () =>{
     console.log('Server is running on port', PORT)
 });

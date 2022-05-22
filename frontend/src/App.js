@@ -13,18 +13,26 @@ import Services from './Components/Home/Service';
 import About from './Components/Home/About';
 import Contact from './Components/Home/Contact';
 import Error from './Components/Home/Error';
+import MCounterclass from'./Components/Home/MCounterclass';
+
+
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} /> 
         <Route exact path="/service" element={<Services />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/mcounterclass" element={<MCounterclass/>}/>
         <Route exact path="*" element={<Error />} />
+       
+        
       </Routes>
+    
+      
     </>
 
 
