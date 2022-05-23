@@ -12,6 +12,16 @@ const ResearchTopicCtrl = {
         }
     },
 
+    //get Research_Topic by ID
+    getResearch_TopicByID: async(req, res) =>{
+        try {
+            const rtopics = await Research_Topic.findById()
+            res.json(rtopics)
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+
     //add Research_Topic
     createResearch_Topic: async (req, res) => {
         try {
