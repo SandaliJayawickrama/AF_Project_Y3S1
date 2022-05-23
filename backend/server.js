@@ -15,6 +15,8 @@ app.use(fileUpload({
 }))
 
 //Routes
+app.use('/api', require('./routes/ResearchTopicRoute'));
+app.use('/api', require('./routes/Uploads'));
 
 //Connect to MongoDB
 const URI = process.env.MONGODB_URL
@@ -30,6 +32,6 @@ mongoose.connect(URI, {
 
 //Connect to the server
 const PORT = process.env.PORT || 3100
-app.listen(PORT, () =>{
+app.listen(PORT, () => {
     console.log('Server is running on port', PORT)
 });
