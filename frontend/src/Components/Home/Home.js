@@ -26,7 +26,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
+        <a href="/StuGroup"><button>Student Group</button></a>
       </section>
       <About/>
       <Services/>
