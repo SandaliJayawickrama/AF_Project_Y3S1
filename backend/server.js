@@ -15,6 +15,9 @@ app.use(fileUpload({
 }))
 
 //Routes
+const GroupRoutes = require("./routes/StuGroupRoute");
+app.use("/api" , GroupRoutes);
+
 
 //Connect to MongoDB
 const URI = process.env.MONGODB_URL
