@@ -33,10 +33,13 @@ function Header() {
                                 <a class="nav-link text-dark" href="/contact">Contact</a>
                             </li>
                             <li class="nav-item">
-
                                 <a class="nav-link text-dark" href="/fileupload">File Upload</a>
+                            </li>
+                            <li>
                                 <a class="nav-link text-dark" href="/mcounterclass">Marking</a>
-
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark" href="/topic">Research Topic</a>
                             </li>
                         </ul>
                         <li>

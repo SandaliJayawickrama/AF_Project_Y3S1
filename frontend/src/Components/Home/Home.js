@@ -1,9 +1,7 @@
-
 import React from 'react'
 import About from '../Home/About';
 import Services from './Service';
 import Contact from './Contact';
-
 
 const Home = () => {
   return (
@@ -20,9 +18,7 @@ const Home = () => {
                 distribution to markets. Agriculture provides most of the
                 world's food and fabrics. people to use and their
                 distribution to markets. Agriculture provides most of the
-                world's food and fabrics.</p>
-                
-                
+                world's food and fabrics.</p>                
             </div>
           </div>
         </div>
@@ -32,8 +28,6 @@ const Home = () => {
       <Services/>
       <Contact/>
       <button type="submit" className="btn btn-primary">Submit</button>
-      
-      
     </div>
   )
 }
