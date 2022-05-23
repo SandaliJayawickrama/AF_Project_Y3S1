@@ -13,7 +13,8 @@ import Services from './Components/Home/Service';
 import About from './Components/Home/About';
 import Contact from './Components/Home/Contact';
 import Error from './Components/Home/Error';
-import MCounterclass from'./Components/Home/MCounterclass';
+import MCounterclass from'./Components/Admin/MCounterclass';
+import Allmarking from './Components/Admin/Allmarking';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/mcounterclass" element={<MCounterclass/>}/>
+        <Route exact path="/allmarking" element={<Allmarking/>}/>
         <Route exact path="*" element={<Error />} />
        
         

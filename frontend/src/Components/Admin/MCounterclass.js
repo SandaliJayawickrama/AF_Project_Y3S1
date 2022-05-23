@@ -8,6 +8,8 @@ export default function AddMarking(){
     const[date,setDate]=useState("");
     const[point,setPoint]=useState("");
     const[marks,setMarks]=useState("");
+    
+    
 
     function sentMarkingData(e){
         e.preventDefault();
@@ -28,6 +30,8 @@ export default function AddMarking(){
             alert(err)
         })
     }
+    
+    
         return(
         <div className="container">
             <form onSubmit={sentMarkingData}>
@@ -50,11 +54,17 @@ export default function AddMarking(){
                         setDate(e.target.value);
                     }}></input>
                 </div>
+
+                
+
                 <div className="form-check">
                 <label for="point">Marking Point</label>
-                    <input type="text" className="form-control" id="point" placeholder="Marking point" onChange={(e)=>{
+                    <input name="service" type="text" className="form-control" id="point" placeholder="Marking point" onChange={(e)=>{
                         setPoint(e.target.value);
                     }}></input>
+                   
+
+                    
                 </div>
                 <div className="form-check">
                 <label for="marks">Marks</label>
@@ -62,8 +72,13 @@ export default function AddMarking(){
                         setMarks(e.target.value);
                     }}></input>
                 </div>
+                <br></br><br></br><br></br><br></br>
+
                 <button type="submit" className="btn btn-primary">Submit</button>
+               
             </form>
+            
+            <a class="nav-link text-dark" href="/allmarking">Marking</a>
         </div>
         ) 
     
