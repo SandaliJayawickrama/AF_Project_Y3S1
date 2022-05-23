@@ -32,6 +32,9 @@ function Header() {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="/contact">Contact</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="/mcounterclass">Marking</a>
+                            </li>
                         </ul>
                         <li>
                             <NavLink className="btn btn-outline-primary ms-2 px-4 rounded-pill" to="/login">
