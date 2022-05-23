@@ -17,6 +17,10 @@ app.use(fileUpload({
 //Routes
 app.use('/api', require('./routes/ResearchTopicRoute'));
 app.use('/api', require('./routes/Uploads'));
+const GroupRoutes = require("./routes/StuGroupRoute");
+app.use("/api" , GroupRoutes);
+const markingRouter = require("./routes/markings.js");
+app.use("/marking",markingRouter); 
 
 //Connect to MongoDB
 const URI = process.env.MONGODB_URL

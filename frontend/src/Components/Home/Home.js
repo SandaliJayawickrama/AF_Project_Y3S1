@@ -26,11 +26,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
+        <a href="/StuGroup"><button>Student Group</button></a>
       </section>
       <About/>
       <Services/>
       <Contact/>
+      <button type="submit" className="btn btn-primary">Submit</button>
+      
       
     </div>
   )
