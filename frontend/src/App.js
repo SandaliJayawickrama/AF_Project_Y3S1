@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import '../node_modules/font-awesome/css/font-awesome.min.css';
@@ -13,6 +9,8 @@ import Services from './Components/Home/Service';
 import About from './Components/Home/About';
 import Contact from './Components/Home/Contact';
 import Error from './Components/Home/Error';
+import ResearchTopic from './Components/Student/ResearchTopic';
+import ViewResearchTopic from './Components/Student/ViewResearchTopic';
 
 function App() {
   return (
@@ -23,11 +21,11 @@ function App() {
         <Route exact path="/service" element={<Services />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/topic" element={<ResearchTopic />} />
+        <Route exact path="/viewtopic" element={<ViewResearchTopic />} />
         <Route exact path="*" element={<Error />} />
       </Routes>
     </>
-
-
   );
 }
 
