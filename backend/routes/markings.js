@@ -10,6 +10,12 @@ router.route("/add").post((req,res)=>{
     const date = Date(req.body.date);
     const point= req.body.point;
     const marks = req.body.marks;
+    const point1= req.body.point;
+    const marks1 = req.body.marks;
+    const point2= req.body.point;
+    const marks2 = req.body.marks;
+    const point3= req.body.point;
+    const marks3 = req.body.marks;
 
     const newMarking = new Marking({
 
@@ -17,7 +23,14 @@ router.route("/add").post((req,res)=>{
         assignment,
         date,
         point,
-        marks
+        marks,
+        point1,
+        marks1,
+        point2,
+        marks2,
+        point3,
+        marks3,
+
     })
     
     newMarking.save().then(()=>{
@@ -37,16 +50,23 @@ router.route("/").get((req,res)=>{
     })
 })
 
+
 router.route("/update/:id").put(async (req, res)=>{
     let markingID = req.params.id;
-    const{subject,assignment,date,point,marks}= req.body;
+    const{subject,assignment,date,point,marks, point1,marks1,point2,marks2,point3,marks3}= req.body;
      
 const updateMarking ={
     subject, 
     assignment,
     date,
     point,
-    marks
+    marks,
+    point1,
+    marks1,
+    point2,
+    marks2,
+    point3,
+    marks3,
 }
 
 
@@ -73,7 +93,7 @@ router.route("/delete/:id").delete(async (req,res)=>{
 })
 
 router.route("/get/:id").get(async (req, res)=>{
-    let userId = req.params.id;
+    let markingID = req.params.id;
     const user = await Marking.findBYId(markingID)
     .then((marking)=>{
         res.status(200).send({status:"User fetched", marking})

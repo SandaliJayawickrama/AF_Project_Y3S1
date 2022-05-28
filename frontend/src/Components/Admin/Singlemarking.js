@@ -8,7 +8,7 @@ export default function Allmarking() {
 
     useEffect(()=>{
         function getMarking(){
-            axios.get("http://localhost:3100/marking/").then((res)=>{
+            axios.get("http://localhost:3100/marking").then((res)=>{
                 console.log(res.data);
                 setMarking(res.data);
             }).catch((err)=>{
@@ -23,18 +23,26 @@ export default function Allmarking() {
             <table>
                 <thead>
                     <tr>
+                        <th scope="col">ID</th>
                         <th scope="col">Subject</th>
                         <th scope="col">Assigenment</th>
-                        
+                        <th scope="col">Date of deadline</th>
+                        <th scope="col">Point</th>
+                        <th scope="col">Marks</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
                     {
                         marking.map(items=>(
-                            <tr key={items._id}>
+                            <tr key={items.markingID}>
+                                <th scope="row">{items._id}</th>
                                 <th scope="row">{items.subject}</th>
                                 <td>{items.assignment}</td>
-                                <td><Link to={`/singlemarking`}>View</Link></td>
+                                <td>{items.date}</td>
+                                <td>{items.point}</td>
+                                <td>{items.marks}</td>
+                               
 
                             </tr>
                         ))

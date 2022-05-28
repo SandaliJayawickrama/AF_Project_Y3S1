@@ -15,6 +15,8 @@ import MCounterclass from'./Components/Admin/MCounterclass';
 import Allmarking from './Components/Admin/Allmarking';
 import ResearchTopic from './Components/Student/ResearchTopic';
 import ViewResearchTopic from './Components/Student/ViewResearchTopic';
+import Singlemarking from './Components/Admin/Singlemarking';
+import Register from './Components/Admin/Register';
 
 function App() {
   return (
@@ -29,8 +31,11 @@ function App() {
         <Route exact path="/allmarking" element={<Allmarking/>}/>
         <Route exact path="/topic" element={<ResearchTopic />} />
         <Route exact path="/viewtopic" element={<ViewResearchTopic />} />
-        <Route exact path="*" element={<Error />} />}
+        <Route exact path="*" element={<Error />} />
         <Route exact path="/StuGroup" element={<StuGroup_Create />} />
+        <Route exact path="/fileupload" element={<FileUpload />} />
+        <Route exact path="/singlemarking" element={<Singlemarking />}/>
+        <Route exact path="/register" element={<Register />}/>
 
       </Routes>
     

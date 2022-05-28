@@ -8,6 +8,12 @@ export default function AddMarking(){
     const[date,setDate]=useState("");
     const[point,setPoint]=useState("");
     const[marks,setMarks]=useState("");
+    const[point1,setPoint1]=useState("");
+    const[marks1,setMarks1]=useState("");
+    const[point2,setPoint2]=useState("");
+    const[marks2,setMarks2]=useState("");
+    const[point3,setPoint3]=useState("");
+    const[marks3,setMarks3]=useState("");
     
     
 
@@ -20,7 +26,13 @@ export default function AddMarking(){
             assignment,
             date,
             point,
-            marks
+            marks,
+            point1,
+            marks1,
+            point2,
+            marks2,
+            point3,
+            marks3
 
         }
         
@@ -55,23 +67,91 @@ export default function AddMarking(){
                     }}></input>
                 </div>
 
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div className="form-check">
+                                <label for="point">Marking Point</label>
+                                <input name="service" type="text" className="form-control" id="point" placeholder="Marking point" onChange={(e)=>{
+                                setPoint(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div className="form-check">
+                                <label for="marks">Marks</label>
+                                <input type="text" className="form-control" id="marks" placeholder="Marks" onChange={(e)=>{
+                                setMarks(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div className="form-check">
+                                <label for="point1">Marking Point</label>
+                                <input name="service" type="text" className="form-control" id="point1" placeholder="Marking point" onChange={(e)=>{
+                                setPoint(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div className="form-check">
+                                <label for="marks1">Marks</label>
+                                <input type="text" className="form-control" id="marks1" placeholder="Marks" onChange={(e)=>{
+                                setMarks(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div className="form-check">
+                                <label for="point2">Marking Point</label>
+                                <input name="service" type="text" className="form-control" id="point2" placeholder="Marking point" onChange={(e)=>{
+                                setPoint(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div className="form-check">
+                                <label for="marks2">Marks</label>
+                                <input type="text" className="form-control" id="marks2" placeholder="Marks" onChange={(e)=>{
+                                setMarks(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div className="form-check">
+                                <label for="point3">Marking Point</label>
+                                <input name="service" type="text" className="form-control" id="point3" placeholder="Marking point" onChange={(e)=>{
+                                setPoint(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div className="form-check">
+                                <label for="marks3">Marks</label>
+                                <input type="text" className="form-control" id="marks3" placeholder="Marks" onChange={(e)=>{
+                                setMarks(e.target.value);
+                                }}></input>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+
+
+
                 
-
-                <div className="form-check">
-                <label for="point">Marking Point</label>
-                    <input name="service" type="text" className="form-control" id="point" placeholder="Marking point" onChange={(e)=>{
-                        setPoint(e.target.value);
-                    }}></input>
-                   
-
-                    
-                </div>
-                <div className="form-check">
-                <label for="marks">Marks</label>
-                    <input type="text" className="form-control" id="marks" placeholder="Marks" onChange={(e)=>{
-                        setMarks(e.target.value);
-                    }}></input>
-                </div>
+                
                 <br></br><br></br><br></br><br></br>
 
                 <button type="submit" className="btn btn-primary">Submit</button>

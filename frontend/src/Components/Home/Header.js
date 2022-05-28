@@ -46,7 +46,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <NavLink to="/register"> <button className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                            <NavLink  to="/register"> <button className="btn btn-outline-primary ms-2 px-4 rounded-pill">
                                 Register <i className="fa fa-user-plus me-2" /> </button>
                             </NavLink>
                         </li>

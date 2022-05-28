@@ -2,53 +2,41 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const markingSchema = new Schema({
-    subject : {
+const registerSchema = new Schema({
+    name : {
         type: String,
         required: true
     },
-    assignment:{
+   id:{
         type: String,
         required: true
     },
-    date:{
-        type: Date,
-        required: true
-    },
-    point:{
+    email:{
         type: String,
         required: true
     },
-    marks:{
+    contact:{
         type: String,
         required: true
     },
-    point1:{
+    password:{
         type: String,
         required: true
     },
-    marks1:{
+    type:{
         type: String,
         required: true
     },
-    point2:{
+    role:{
         type: String,
         required: true
     },
-    marks2:{
-        type: String,
-        required: true
-    },
-    point3:{
-        type: String,
-        required: true
-    },
-    marks3:{
+    interest:{
         type: String,
         required: true
     }
 })
 
-const Marking = mongoose.model("Marking",markingSchema);
+const Register = mongoose.model("Register",registerSchema);
 
-module.exports = Marking;
+module.exports = Register;
